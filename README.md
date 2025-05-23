@@ -75,3 +75,80 @@ src/
 | Gerenciamento de estado | `src/store/`                                 | Zustand ou Redux, caso necessário manter dados globais                     |
 
 ```
+
+
+## 🛠️ Guia rápido para colaborar no ConnectPlay
+
+Se você for contribuir com o projeto, siga esses passos para garantir que tudo funcione corretamente e nada seja enviado direto para a branch `master`.
+
+---
+
+### 🚀 Passo a passo para subir uma funcionalidade
+
+#### 1. Atualize sua `master` local
+
+```bash
+git checkout master
+git pull origin master
+```
+
+#### 2. Crie uma nova branch para sua tarefa
+
+```bash
+git checkout -b feature/nome-da-sua-tarefa
+```
+
+**Exemplo:**
+
+```bash
+git checkout -b feature/criacao-de-card
+```
+
+#### 3. Faça suas alterações e comite
+
+```bash
+git add .
+git commit -m "feat: cria componente de card de usuário"
+```
+
+#### 4. Envie sua branch para o GitHub
+
+```bash
+git push -u origin feature/nome-da-sua-tarefa
+```
+
+---
+
+### ✅ Criar o Pull Request
+
+1. Acesse o repositório no GitHub
+2. Vai aparecer a opção **"Compare & pull request"**
+3. Verifique se está indo de `feature/...` → `master`
+4. Escreva um título e uma descrição do que fez
+5. Crie o PR
+
+---
+
+### 🔒 Observações importantes
+
+- **Não faça push direto para a `master`**
+- **Somente o Kevin pode fazer o merge mas podem testar**
+- Se tiver dúvida, avisa no grupo ou marca alguém no PR
+
+---
+
+### 🧠 Dica: mensagens de commit
+
+Ao escrever mensagens de commit, siga um padrão para facilitar a leitura do histórico do projeto. Aqui estão três prefixos comuns e seu uso:
+
+- `feat:` → para **novas funcionalidades**
+  > Ex: `feat: adiciona botão de login`
+
+- `fix:` → para **correções de bugs**
+  > Ex: `fix: corrige bug do formulário`
+
+- `chore:` → para **tarefas técnicas sem impacto direto no usuário**
+  > Ex: `chore: remove console.log`
+
+---
+
