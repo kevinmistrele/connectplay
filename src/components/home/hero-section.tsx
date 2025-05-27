@@ -1,5 +1,5 @@
 import { Gamepad2, Play } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button.tsx"
 
 export function HeroSection() {
     return (

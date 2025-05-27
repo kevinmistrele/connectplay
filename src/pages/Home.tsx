@@ -1,9 +1,9 @@
-import {Header} from "@/components/header.tsx";
-import {FeaturesSection} from "@/components/features-section.tsx";
-import {CTASection} from "@/components/cta-section.tsx";
-import {Footer} from "@/components/footer.tsx";
-import {HeroSection} from "@/components/hero-section.tsx";
-import {HowItWorksSection} from "@/components/how-it-works-section.tsx";
+import {Header} from "@/components/home/header.tsx";
+import {FeaturesSection} from "@/components/home/features-section.tsx";
+import {CTASection} from "@/components/home/cta-section.tsx";
+import {Footer} from "@/components/home/footer.tsx";
+import {HeroSection} from "@/components/home/hero-section.tsx";
+import {HowItWorksSection} from "@/components/home/how-it-works-section.tsx";
 
 export default function HomePage() {
     return (

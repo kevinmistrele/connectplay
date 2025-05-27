@@ -1,5 +1,5 @@
 import { Users, MessageCircle, Zap, Shield, Trophy, Gamepad2 } from "lucide-react"
-import { FeatureCard } from "./feature-card"
+import { FeatureCard } from "./feature-card.tsx"
 
 export function FeaturesSection() {
     const features = [
