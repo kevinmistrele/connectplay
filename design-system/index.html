@@ -1,0 +1,435 @@
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Orbitron:wght@500;600;700&amp;family=Poppins:wght@500;600;700&amp;family=Rubik:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C3AED',
+                        'primary-light': '#A78BFA',
+                        secondary: '#0F172A',
+                        background: '#0A0A0A',
+                        'text-light': '#F8FAFC',
+                        accent: '#10B981',
+                        error: '#EF4444',
+                        'card-bg': '#1E1E1E'
+                    },
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                        'rubik': ['Rubik', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #F8FAFC;
+        }
+
+        .glow {
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.7);
+        }
+
+        .input-focus:focus {
+            border-color: #7C3AED;
+            box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.3);
+            outline: none;
+        }
+    </style>
+    <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.ml-3{margin-left:0.75rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-24{height:6rem}.h-4{height:1rem}.h-40{height:10rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-16{width:4rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-full{width:100%}.max-w-5xl{max-width:64rem}.flex-shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-b-lg{border-bottom-right-radius:0.5rem;border-bottom-left-radius:0.5rem}.rounded-r-md{border-top-right-radius:0.375rem;border-bottom-right-radius:0.375rem}.rounded-t-lg{border-top-left-radius:0.5rem;border-top-right-radius:0.5rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-accent{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-error{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-primary{--tw-border-opacity:1;border-color:rgb(124 58 237 / var(--tw-border-opacity, 1))}.border-primary\/20{border-color:rgb(124 58 237 / 0.2)}.border-primary\/30{border-color:rgb(124 58 237 / 0.3)}.bg-accent{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-accent\/20{background-color:rgb(16 185 129 / 0.2)}.bg-background{--tw-bg-opacity:1;background-color:rgb(10 10 10 / var(--tw-bg-opacity, 1))}.bg-card-bg{--tw-bg-opacity:1;background-color:rgb(30 30 30 / var(--tw-bg-opacity, 1))}.bg-error{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-error\/20{background-color:rgb(239 68 68 / 0.2)}.bg-primary{--tw-bg-opacity:1;background-color:rgb(124 58 237 / var(--tw-bg-opacity, 1))}.bg-primary-light{--tw-bg-opacity:1;background-color:rgb(167 139 250 / var(--tw-bg-opacity, 1))}.bg-primary\/20{background-color:rgb(124 58 237 / 0.2)}.bg-secondary{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-secondary\/50{background-color:rgb(15 23 42 / 0.5)}.bg-text-light{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-accent\/30{--tw-gradient-from:rgb(16 185 129 / 0.3) var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-error\/30{--tw-gradient-from:rgb(239 68 68 / 0.3) var(--tw-gradient-from-position);--tw-gradient-to:rgb(239 68 68 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-primary\/30{--tw-gradient-from:rgb(124 58 237 / 0.3) var(--tw-gradient-from-position);--tw-gradient-to:rgb(124 58 237 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-secondary{--tw-gradient-from:#0F172A var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-background{--tw-gradient-to:#0A0A0A var(--tw-gradient-to-position)}.to-secondary{--tw-gradient-to:#0F172A var(--tw-gradient-to-position)}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pb-2{padding-bottom:0.5rem}.font-inter{font-family:Inter, sans-serif}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-orbitron{font-family:Orbitron, sans-serif}.font-poppins{font-family:Poppins, sans-serif}.font-rubik{font-family:Rubik, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-wider{letter-spacing:0.05em}.text-accent{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-error{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity, 1))}.text-primary-light{--tw-text-opacity:1;color:rgb(167 139 250 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.placeholder-gray-500::placeholder{--tw-placeholder-opacity:1;color:rgb(107 114 128 / var(--tw-placeholder-opacity, 1))}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:transform:hover{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-primary\/60:hover{border-color:rgb(124 58 237 / 0.6)}.hover\:bg-accent\/80:hover{background-color:rgb(16 185 129 / 0.8)}.hover\:bg-error\/80:hover{background-color:rgb(239 68 68 / 0.8)}.hover\:bg-primary-light:hover{--tw-bg-opacity:1;background-color:rgb(167 139 250 / var(--tw-bg-opacity, 1))}.hover\:bg-primary\/10:hover{background-color:rgb(124 58 237 / 0.1)}.hover\:text-primary-light:hover{--tw-text-opacity:1;color:rgb(167 139 250 / var(--tw-text-opacity, 1))}.focus\:ring-primary:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(124 58 237 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:text-5xl{font-size:3rem;line-height:1}}</style></head>
+<body class="min-h-screen p-8">
+<div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <header class="mb-12">
+        <h1 class="font-orbitron text-4xl md:text-5xl font-bold text-primary mb-2">NEXUS<span class="text-accent">GAME</span></h1>
+        <p class="font-inter text-primary-light">Design System Preview</p>
+    </header>
+
+    <!-- Color Palette -->
+    <section class="mb-12">
+        <h2 class="font-poppins text-2xl font-semibold mb-6 border-b border-primary pb-2">Paleta de Cores</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="flex flex-col">
+                <div class="h-24 bg-primary rounded-t-lg"></div>
+                <div class="bg-card-bg p-3 rounded-b-lg">
+                    <p class="font-inter text-sm">Primária</p>
+                    <p class="font-mono text-xs text-primary-light">#7C3AED</p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="h-24 bg-primary-light rounded-t-lg"></div>
+                <div class="bg-card-bg p-3 rounded-b-lg">
+                    <p class="font-inter text-sm">Primária Clara</p>
+                    <p class="font-mono text-xs text-primary-light">#A78BFA</p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="h-24 bg-secondary rounded-t-lg"></div>
+                <div class="bg-card-bg p-3 rounded-b-lg">
+                    <p class="font-inter text-sm">Secundária</p>
+                    <p class="font-mono text-xs text-primary-light">#0F172A</p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="h-24 bg-background rounded-t-lg"></div>
+                <div class="bg-card-bg p-3 rounded-b-lg">
+                    <p class="font-inter text-sm">Background</p>
+                    <p class="font-mono text-xs text-primary-light">#0A0A0A</p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="h-24 bg-text-light rounded-t-lg"></div>
+                <div class="bg-card-bg p-3 rounded-b-lg">
+                    <p class="font-inter text-sm">Texto Claro</p>
+                    <p class="font-mono text-xs text-primary-light">#F8FAFC</p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="h-24 bg-accent rounded-t-lg"></div>
+                <div class="bg-card-bg p-3 rounded-b-lg">
+                    <p class="font-inter text-sm">Acento</p>
+                    <p class="font-mono text-xs text-primary-light">#10B981</p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="h-24 bg-error rounded-t-lg"></div>
+                <div class="bg-card-bg p-3 rounded-b-lg">
+                    <p class="font-inter text-sm">Erro</p>
+                    <p class="font-mono text-xs text-primary-light">#EF4444</p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="h-24 bg-card-bg rounded-t-lg"></div>
+                <div class="bg-card-bg p-3 rounded-b-lg">
+                    <p class="font-inter text-sm">Card BG</p>
+                    <p class="font-mono text-xs text-primary-light">#1E1E1E</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="mb-12">
+        <h2 class="font-poppins text-2xl font-semibold mb-6 border-b border-primary pb-2">Tipografia</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-card-bg p-6 rounded-lg">
+                <h3 class="text-primary-light mb-4 font-inter text-sm uppercase tracking-wider">Títulos</h3>
+
+                <div class="mb-6">
+                    <p class="text-xs text-primary-light mb-1">Orbitron (Tech/Gamer)</p>
+                    <h4 class="font-orbitron text-3xl font-bold">Título Principal</h4>
+                    <h5 class="font-orbitron text-xl font-semibold mt-2">Subtítulo</h5>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-xs text-primary-light mb-1">Poppins</p>
+                    <h4 class="font-poppins text-3xl font-bold">Título Principal</h4>
+                    <h5 class="font-poppins text-xl font-semibold mt-2">Subtítulo</h5>
+                </div>
+
+                <div>
+                    <p class="text-xs text-primary-light mb-1">Inter</p>
+                    <h4 class="font-inter text-3xl font-bold">Título Principal</h4>
+                    <h5 class="font-inter text-xl font-semibold mt-2">Subtítulo</h5>
+                </div>
+            </div>
+
+            <div class="bg-card-bg p-6 rounded-lg">
+                <h3 class="text-primary-light mb-4 font-inter text-sm uppercase tracking-wider">Texto Padrão</h3>
+
+                <div class="mb-6">
+                    <p class="text-xs text-primary-light mb-1">Inter</p>
+                    <p class="font-inter mb-2">Este é um exemplo de texto padrão usando a fonte Inter. Perfeito para conteúdo principal do seu sistema.</p>
+                    <p class="font-inter text-sm text-gray-400">Texto secundário em tamanho menor.</p>
+                </div>
+
+                <div>
+                    <p class="text-xs text-primary-light mb-1">Rubik</p>
+                    <p class="font-rubik mb-2">Este é um exemplo de texto padrão usando a fonte Rubik. Também excelente para conteúdo principal.</p>
+                    <p class="font-rubik text-sm text-gray-400">Texto secundário em tamanho menor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section class="mb-12">
+        <h2 class="font-poppins text-2xl font-semibold mb-6 border-b border-primary pb-2">Componentes</h2>
+
+        <!-- Buttons -->
+        <div class="mb-10">
+            <h3 class="text-primary-light mb-4 font-inter text-lg">Botões</h3>
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-primary hover:bg-primary-light text-white font-inter py-2 px-6 rounded-md transition-all duration-300 hover-glow">
+                    Botão Primário
+                </button>
+
+                <button class="bg-transparent border border-primary text-primary hover:bg-primary/10 font-inter py-2 px-6 rounded-md transition-all duration-300">
+                    Botão Secundário
+                </button>
+
+                <button class="bg-accent hover:bg-accent/80 text-white font-inter py-2 px-6 rounded-md transition-all duration-300">
+                    Botão Acento
+                </button>
+
+                <button class="bg-error hover:bg-error/80 text-white font-inter py-2 px-6 rounded-md transition-all duration-300">
+                    Botão Erro
+                </button>
+
+                <button class="bg-primary hover:bg-primary-light text-white font-inter py-2 px-6 rounded-md transition-all duration-300 flex items-center gap-2 hover-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+                    </svg>
+                    Com Ícone
+                </button>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="mb-10">
+            <h3 class="text-primary-light mb-4 font-inter text-lg">Cards</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card Padrão -->
+                <div class="bg-card-bg rounded-lg p-5 border border-primary/30 hover:border-primary/60 transition-all duration-300">
+                    <h4 class="font-poppins text-lg font-semibold mb-3">Card Padrão</h4>
+                    <p class="font-inter text-sm text-gray-300 mb-4">Este é um exemplo de card com borda roxa sutil.</p>
+                    <button class="text-primary hover:text-primary-light text-sm font-medium transition-colors">Saiba mais →</button>
+                </div>
+
+                <!-- Card com Glow -->
+                <div class="bg-card-bg rounded-lg p-5 glow transition-all duration-300">
+                    <h4 class="font-poppins text-lg font-semibold mb-3">Card com Glow</h4>
+                    <p class="font-inter text-sm text-gray-300 mb-4">Este card tem um efeito de brilho (glow) roxo nas bordas.</p>
+                    <button class="text-primary hover:text-primary-light text-sm font-medium transition-colors">Saiba mais →</button>
+                </div>
+
+                <!-- Card com Gradiente -->
+                <div class="bg-gradient-to-br from-secondary to-background rounded-lg p-5 border border-primary/20 transition-all duration-300">
+                    <h4 class="font-poppins text-lg font-semibold mb-3">Card com Gradiente</h4>
+                    <p class="font-inter text-sm text-gray-300 mb-4">Este card usa um gradiente sutil como fundo.</p>
+                    <button class="text-primary hover:text-primary-light text-sm font-medium transition-colors">Saiba mais →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forms -->
+        <div class="mb-10">
+            <h3 class="text-primary-light mb-4 font-inter text-lg">Inputs e Forms</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-card-bg p-6 rounded-lg">
+                    <div class="mb-4">
+                        <label for="username" class="block font-inter text-sm mb-2">Nome de usuário</label>
+                        <input type="text" id="username" class="w-full bg-background border border-gray-700 rounded-md py-2 px-4 text-white placeholder-gray-500 input-focus transition-all duration-300" placeholder="Digite seu nome de usuário">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email" class="block font-inter text-sm mb-2">Email</label>
+                        <input type="email" id="email" class="w-full bg-background border border-gray-700 rounded-md py-2 px-4 text-white placeholder-gray-500 input-focus transition-all duration-300" placeholder="seu@email.com">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password" class="block font-inter text-sm mb-2">Senha</label>
+                        <input type="password" id="password" class="w-full bg-background border border-gray-700 rounded-md py-2 px-4 text-white placeholder-gray-500 input-focus transition-all duration-300" placeholder="••••••••">
+                    </div>
+
+                    <button class="w-full bg-primary hover:bg-primary-light text-white font-inter py-2 px-6 rounded-md transition-all duration-300 hover-glow">
+                        Entrar
+                    </button>
+                </div>
+
+                <div class="bg-card-bg p-6 rounded-lg">
+                    <div class="mb-4">
+                        <label for="select" class="block font-inter text-sm mb-2">Selecione uma opção</label>
+                        <select id="select" class="w-full bg-background border border-gray-700 rounded-md py-2 px-4 text-white input-focus transition-all duration-300">
+                            <option value="">Selecione...</option>
+                            <option value="1">Opção 1</option>
+                            <option value="2">Opção 2</option>
+                            <option value="3">Opção 3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block font-inter text-sm mb-2">Opções</label>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="check1" class="h-4 w-4 text-primary focus:ring-primary border-gray-700 rounded bg-background">
+                                <label for="check1" class="ml-2 font-inter text-sm">Opção de checkbox 1</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="check2" class="h-4 w-4 text-primary focus:ring-primary border-gray-700 rounded bg-background">
+                                <label for="check2" class="ml-2 font-inter text-sm">Opção de checkbox 2</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block font-inter text-sm mb-2">Escolha uma</label>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" id="radio1" name="radio-group" class="h-4 w-4 text-primary focus:ring-primary border-gray-700 bg-background">
+                                <label for="radio1" class="ml-2 font-inter text-sm">Opção de radio 1</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" id="radio2" name="radio-group" class="h-4 w-4 text-primary focus:ring-primary border-gray-700 bg-background">
+                                <label for="radio2" class="ml-2 font-inter text-sm">Opção de radio 2</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alerts/Notifications -->
+        <div class="mb-10">
+            <h3 class="text-primary-light mb-4 font-inter text-lg">Alertas e Notificações</h3>
+            <div class="space-y-4">
+                <div class="bg-primary/20 border-l-4 border-primary p-4 rounded-r-md">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-inter text-sm text-primary-light">Alerta informativo para o usuário.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-accent/20 border-l-4 border-accent p-4 rounded-r-md">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-inter text-sm text-accent">Operação realizada com sucesso!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-error/20 border-l-4 border-error p-4 rounded-r-md">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-inter text-sm text-error">Ocorreu um erro. Tente novamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example Page Section -->
+    <section class="mb-12">
+        <h2 class="font-poppins text-2xl font-semibold mb-6 border-b border-primary pb-2">Exemplo de Layout</h2>
+
+        <div class="bg-card-bg rounded-lg overflow-hidden">
+            <!-- Nav -->
+            <div class="bg-secondary p-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <h2 class="font-orbitron text-xl font-bold text-primary">NEXUS<span class="text-accent">GAME</span></h2>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="font-inter text-white hover:text-primary-light transition-colors">Home</a>
+                    <a href="#" class="font-inter text-white hover:text-primary-light transition-colors">Jogos</a>
+                    <a href="#" class="font-inter text-white hover:text-primary-light transition-colors">Perfil</a>
+                    <a href="#" class="font-inter text-white hover:text-primary-light transition-colors">Suporte</a>
+                </div>
+                <div>
+                    <button class="bg-primary hover:bg-primary-light text-white font-inter py-1.5 px-4 rounded-md text-sm transition-all duration-300">
+                        Login
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6">
+                <h3 class="font-orbitron text-2xl font-bold mb-4">Jogos em Destaque</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <!-- Game Card 1 -->
+                    <div class="bg-secondary/50 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-40 bg-gradient-to-br from-primary/30 to-secondary flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-poppins font-semibold">Cyber Legends</h4>
+                            <p class="text-sm text-gray-400 mt-1">RPG Futurista</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="bg-accent/20 text-accent text-xs py-1 px-2 rounded">Novo</span>
+                                <button class="text-primary hover:text-primary-light text-sm font-medium">Ver detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 2 -->
+                    <div class="bg-secondary/50 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-40 bg-gradient-to-br from-accent/30 to-secondary flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-poppins font-semibold">Elemental Quest</h4>
+                            <p class="text-sm text-gray-400 mt-1">Aventura Mágica</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="bg-primary/20 text-primary-light text-xs py-1 px-2 rounded">Popular</span>
+                                <button class="text-primary hover:text-primary-light text-sm font-medium">Ver detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 3 -->
+                    <div class="bg-secondary/50 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-40 bg-gradient-to-br from-error/30 to-secondary flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-poppins font-semibold">Battle Royale</h4>
+                            <p class="text-sm text-gray-400 mt-1">Ação Multiplayer</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="bg-error/20 text-error text-xs py-1 px-2 rounded">Hot</span>
+                                <button class="text-primary hover:text-primary-light text-sm font-medium">Ver detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <button class="bg-transparent border border-primary text-primary hover:bg-primary/10 font-inter py-2 px-6 rounded-md transition-all duration-300">
+                        Ver todos os jogos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94455b24820fa457',t:'MTc0ODAxMTcyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+</body></html>
